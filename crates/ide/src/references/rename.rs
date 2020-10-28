@@ -402,6 +402,21 @@ mod tests {
     }
 
     #[test]
+    fn test_rename_for_function_with_attribute_name() {
+        check(
+            "bar",
+            r#"
+#[foo]
+fn foo<|>() {}
+"#,
+            r#"
+#[foo]
+fn bar<|>() {}
+"#,
+        );
+    }
+
+    #[test]
     fn test_rename_for_local() {
         check(
             "k",
