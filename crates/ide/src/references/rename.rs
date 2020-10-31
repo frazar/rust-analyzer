@@ -402,7 +402,7 @@ mod tests {
     }
 
     #[test]
-    fn test_rename_for_function_with_attribute_name() {
+    fn test_rename_function_with_attribute_name() {
         check(
             "bar",
             r#"
