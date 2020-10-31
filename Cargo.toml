@@ -4,16 +4,16 @@ members = [ "crates/*", "xtask/" ]
 [profile.dev]
 # Disabling debug info speeds up builds a bunch,
 # and we don't rely on it for debugging that much.
-debug = 0
+# debug = 2
 
 [profile.dev.package]
 # These speed up local tests.
-rowan.opt-level = 3
-rustc-hash.opt-level = 3
-smol_str.opt-level = 3
-text-size.opt-level = 3
+# rowan.opt-level = 3
+# rustc-hash.opt-level = 3
+# smol_str.opt-level = 3
+# text-size.opt-level = 3
 # This speeds up `cargo xtask dist`.
-miniz_oxide.opt-level = 3
+# miniz_oxide.opt-level = 3
 
 [profile.release]
 incremental = true

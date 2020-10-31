@@ -328,8 +328,12 @@ impl NameRefClass {
             }
         }
 
+        dbg!(name_ref);
+
         if let Some(path) = name_ref.syntax().ancestors().find_map(ast::Path::cast) {
+            dbg!(&path);
             if let Some(resolved) = sema.resolve_path(&path) {
+                dbg!(&resolved);
                 return Some(NameRefClass::Definition(resolved.into()));
             }
         }
